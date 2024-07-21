@@ -8,9 +8,13 @@ This is a social network API built using Node.js, Express, and MongoDB. The API 
 - Usage
 - API Endpoints
     - User Endpoints
+        - Add friend
+        - Remove friend
     - Thought Endpoints
     - Reaction Endpoints
 - Models
+- Walkthrough Demo
+- Questions
 
 ## Installation
 1. Clone the repository
@@ -58,7 +62,12 @@ The server will start on http://localhost:3001. You can use Insomnia, Postman, o
 5. Delete User
 - URL: DELETE /api/users/:userId
 - Description: Delete a user from the database by their unique ID.
-
+6. Add a friend to a user's friend list
+- URL: POST /api/users/:userId/friends/:friendId
+- Description: Add a friend to a user's friend list by their unique user ID and friend ID.
+7. Remove a friend from a user's friend list
+- URL: DELETE /api/users/:userId/friends/:friendId
+- Description: Remove a friend from a user's friend list by their unique user ID and friend ID.
 ## Thought Endpoints
 1. Get all thoughts
 - URL: GET /api/thoughts
@@ -106,5 +115,7 @@ The server will start on http://localhost:3001. You can use Insomnia, Postman, o
 - username: String, required
 - createdAt: Date, defaults to current date, uses a getter to format the timestamp
 
+## Walkthrough-Demo
+<video controls src="assets/m18-walkthrough-demo.mp4" title="Title"></video>
 ## Questions
 If you have any questions, please open an issue or contact tylerzhao103@gmail.com.
